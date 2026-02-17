@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WebApiCrudProfessor.Modelo;
 
 namespace WebApiCrudProfessor.DataBase
 {
@@ -7,5 +8,8 @@ namespace WebApiCrudProfessor.DataBase
         public ProfessorDbContext(DbContextOptions<ProfessorDbContext> options)
             :base(options)
         { }
+
+        public DbSet<Professor> Professores { get; set; }
+
     }
 }

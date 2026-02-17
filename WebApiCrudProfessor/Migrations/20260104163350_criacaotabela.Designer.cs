@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WebApiCrudProfessor.DataBase;
 
@@ -11,9 +12,11 @@ using WebApiCrudProfessor.DataBase;
 namespace WebApiCrudProfessor.Migrations
 {
     [DbContext(typeof(ProfessorDbContext))]
-    partial class ProfessorDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260104163350_criacaotabela")]
+    partial class criacaotabela
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
